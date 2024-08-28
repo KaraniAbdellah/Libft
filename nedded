@@ -1,0 +1,64 @@
+/// Compiling and Linking:
+
+Compiling source files into object files.
+Linking object files to create an executable.
+Creating static (.a) and dynamic (.so) libraries.
+
+- preprocessing : gcc -E first.c first.i ? + Some Information About #
+- compilation : gcc -c first.c -o first.o
+- linker : gcc first.o -o first
+- loading : ./first
+
+/// Design Your Library:
+
+	All The Functions That Exit In <string.h>
+
+/// Create Header Files:
+
+	#ifndef MYLIB_H
+	#define MYLIB_H
+	void myFunction1(); // Declaration Fucntion
+	int myFunction2(int a); // Another Declaration Of Function
+	#endif // MYLIB_H. s
+
+/// Implement Library Functions
+
+	## All Function in string.h
+
+/// Use The Library 
+
+	in file.c: 
+	#include "mylib.h"
+	int main() {sayHello(); return 0;}
+
+
+
+
+
+/*
+	Additional Tips:
+	Documentation: Document your library functions and usage examples.
+	Testing: Write test cases to verify the functionality of your library.
+	Version Control: Use version control (e.g., Git) to manage your library's source code.
+	Packaging: Consider packaging your library for distribution (e.g., creating a .tar.gz archive).
+*/
+
+// Documentation
+Doxygen, which is a documentation generator widely used in software
+development to create documentation from annotated source code
+	@brief : This tag provides a brief description of the function.
+	@param: This tag describes a parameter of the function.
+Example : sayHello() Function
+/**
+ * @brief Prints a greeting message.
+ *
+ * @param name The name to be included in the greeting.
+ *
+*/
+
+
+
+
+
+
+
